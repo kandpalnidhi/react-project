@@ -1,21 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import Clock from './Clock'
+import React from "react";
+import BmiCal from "./project2/BmiCal";
 
 function App() {
-  const [color,setColor]=useState('green')
   return (
-    <div>
-      <Clock color={color}/>
-      <select onChange={(event)=>setColor(event.target.value)}>
-        <option value={"Red"}>Red</option>
-        <option value={"Yellow"}>Yellow</option>
-        <option value={"Orange"}>orange</option>
-        <option value={"Green"}>Green</option>
-        
-      </select>
+    <div className="App">
+      <BmiCal />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
