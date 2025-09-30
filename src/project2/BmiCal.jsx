@@ -14,7 +14,8 @@ function BmiCal() {
     if (weight === 0 || height === 0) {
       alert('Please enter valid weight and height');
     } else {
-      let bmiValue = (weight / (height * height)) * 703;
+      let bmiValue  = weight / ( (height/100) * (height/100) );
+
       setBmi(bmiValue.toFixed(1));
 
       if (bmiValue < 18.5) {
@@ -31,8 +32,12 @@ function BmiCal() {
 
   // reload
   let reload = () => {
-    window.location.reload();
-  };
+  setWeight("");
+  setHeight("");
+  setBmi("");
+  setMessage("");
+};
+
 
   return (
     <>
